@@ -1,0 +1,25 @@
+.list {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 8px;
+}
+
+.cover {
+  border-radius: 55px;
+}
+
+.cover > img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-radius);
+  object-fit: cover;
+}
+
+.book_name {
+  font-weight: 600;
+}
+
+.book_author {
+  font-size: 0.875rem;
+}
