@@ -1,6 +1,6 @@
-import { home } from '@/data/home';
-import Link from 'next/link';
-import gen from '@/lib/gen';
+import { home } from "@/data/home";
+import Link from "next/link";
+import gen from "@/lib/crawl/gen";
 
 export default async function Home() {
   const data = await gen(home[0].input);
@@ -16,14 +16,14 @@ export default async function Home() {
               <Link
                 className="book"
                 key={i}
-                href={`/${n.link?.split('/')[3]}` || 'hello'}
+                href={`/${n.link?.split("/")[3]}` || "hello"}
               >
                 <div className="cover">
                   {/* <figure className=""> */}
                   <img
                     className="h-44 max-h-full w-full rounded-md"
                     src={
-                      n.cover || 'https://cdn.chivi.app/covers/8jd76xk8.webp'
+                      n.cover || "https://cdn.chivi.app/covers/8jd76xk8.webp"
                     }
                     alt={n.name}
                   />

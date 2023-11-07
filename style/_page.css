@@ -1,3 +1,8 @@
+.wrapper {
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
 .list {
   display: grid;
   gap: 0.5rem;
@@ -22,4 +27,88 @@
 
 .book_author {
   font-size: 0.875rem;
+}
+
+.book-info {
+  --cover-size: 35%;
+  display: grid;
+  grid-template-areas:
+    "nam nam"
+    "cov dtl"
+    "tool tool";
+  grid-template-columns: var(--cover-size) 1fr;
+  gap: 8px;
+}
+
+.book-info_name {
+  grid-area: nam;
+}
+
+.book-info_cover {
+  grid-area: cov;
+}
+
+.book-info_cover > img {
+  width: 100%;
+}
+
+.book-info_detail {
+  grid-area: dtl;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.book-info_toolbar {
+  grid-area: tool;
+  display: flex;
+  justify-content: center;
+}
+
+.book-desc {
+  font-weight: 300;
+}
+
+.book-desc > div {
+  display: inline;
+}
+
+.book-desc > div:last-child {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.list-chapter > h3 {
+  font-size: larger;
+  margin-bottom: 0.75rem;
+}
+
+.list-chapter {
+  display: grid;
+  margin-top: 1.5rem;
+}
+
+a {
+  display: inline-block;
+}
+
+.list-chapter a {
+  padding: 0.1rem;
+}
+
+.num-page {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  width: fit-content;
+  border: 1px solid #435361;
+}
+
+.num-page > * {
+  padding: 0.75rem;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.num-page > div.-active {
+  border: 1px solid var(--primary-color);
 }
